@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import {
-  PercenterContext,
+  ReducerContext,
   setOperator,
   operators
-} from "../../context/reducer";
+} from "../../context/reducer-context";
 
 const OperatorSelector = () => {
-  const [{ operator }, dispatch] = useContext(PercenterContext);
+  const [{ operator }, dispatch] = useContext(ReducerContext);
   const onClick = e => {
     dispatch(setOperator(e.target.value));
   };

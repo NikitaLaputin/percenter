@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { comaReplacer, dotReplacer } from "../utils";
 
-export const PercenterContext = createContext(null);
+export const ReducerContext = createContext(null);
 
 export const operators = {
   from: "от",
