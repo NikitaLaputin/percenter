@@ -3,10 +3,12 @@ import { comaReplacer, dotReplacer } from "../utils";
 
 export const ReducerContext = createContext(null);
 
-export const operators = {
+export const percentageOperators = {
   from: "от",
   add: "прибавить",
-  takeAway: "отнять",
+  takeAway: "отнять"
+};
+export const numbersOperators = {
   greater: "больше на",
   lesser: "меньше на"
 };

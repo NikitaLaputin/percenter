@@ -2,8 +2,9 @@ import React, { useContext, useRef } from "react";
 import { ReducerContext } from "../../context/reducer-context";
 import { toNumber } from "../../utils";
 import { ToastContext } from "../../context/toast-context";
+import styles from "./styles.module.css";
 
-const BasicInput = ({ type, onChange }) => {
+const BasicInput = ({ type, onChange, postfix }) => {
   const [state, dispatch] = useContext(ReducerContext);
   const { activeInputs } = state;
   const value = state[type];
@@ -22,14 +23,19 @@ const BasicInput = ({ type, onChange }) => {
     addToast({ message: "Значение скопировано!" });
   };
   return (
-    <input
-      ref={inputRef}
-      value={value}
-      readOnly={readOnly}
-      style={readOnly ? { cursor: "pointer" } : {}}
-      onChange={handleChange}
-      onClick={onCLick}
-    ></input>
+    <div
+      className={`${styles["input-container"]}
+        ${!readOnly && styles["input-container__active"]}`}
+    >
+      <input
+        ref={inputRef}
+        value={value}
+        readOnly={readOnly}
+        onChange={handleChange}
+        onClick={onCLick}
+      ></input>
+      {postfix && <label>{postfix}</label>}
+    </div>
   );
 };
 

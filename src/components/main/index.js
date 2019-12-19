@@ -2,14 +2,19 @@ import React from "react";
 import NumberInput from "../inputs/number-input";
 import PercentInput from "../inputs/percent-input";
 import ResultInput from "../inputs/result-input";
-import OperatorSelector from "../inputs/operator-selector";
+import styles from "./styles.module.css";
+import NumbersOperatorSelector from "../inputs/numbers-operators-selector";
+import PercentageOperatorSelector from "../inputs/percentage-operator-selector";
 
 const Main = () => (
-  <div>
-    <PercentInput />
-    <OperatorSelector />
-    <NumberInput />
-    <ResultInput />
+  <div className={styles["main-container"]}>
+    <div className={styles["content"]}>
+      <PercentInput />
+      <PercentageOperatorSelector />
+      <NumberInput />
+      <NumbersOperatorSelector />
+      <ResultInput />
+    </div>
   </div>
 );
 

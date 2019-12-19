@@ -1,0 +1,55 @@
+.input-container {
+  display: flex;
+  width: 650px;
+  margin: auto;
+  max-width: 90vw;
+}
+.input-container > input {
+  border: none;
+  text-align: right;
+  font-size: 3em;
+  background: #ffffff30;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 10;
+  width: 100%;
+  outline: none;
+}
+
+.input-container > label {
+  font-size: 4em;
+  margin: auto 0 auto 20px;
+}
+
+.input-container__active > input {
+  box-shadow: inset 0px -5px 0px -2px #00ffdea6;
+  cursor: default;
+}
+
+.operator-selector {
+  display: flex;
+  justify-content: space-between;
+}
+
+.operator-selector > button {
+  border-radius: 10px 10px 0 0;
+  border: none;
+  padding: 10px;
+  background: #ffffff00;
+  font-size: 1em;
+  flex: 1 100px;
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.operator-selector > .active {
+  box-shadow: rgba(0, 255, 222, 0.65) 0px -5px 0px -2px inset;
+}
+
+.operator-selector > .active,
+.operator-selector > button:hover {
+  background: #ffffff30;
+}
