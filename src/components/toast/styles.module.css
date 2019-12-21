@@ -1,0 +1,42 @@
+.toast-container {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  transition: 0.3s;
+  max-height: 0;
+}
+
+.toast-container:has(.toast) {
+  max-height: 100vh;
+}
+
+.toast {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(120deg, #d4fc79ba 0%, #96e6a1ba 100%);
+  color: #3a3737;
+  animation: slideIn 0.2s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.toast__fading {
+  animation: slideOut 0.2s ease-in-out;
+}

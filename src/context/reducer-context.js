@@ -5,8 +5,8 @@ export const ReducerContext = createContext(null);
 
 export const percentageOperators = {
   from: "от",
-  add: "прибавить",
-  takeAway: "отнять"
+  add: "прибавить к",
+  takeAway: "отнять от"
 };
 export const numbersOperators = {
   greater: "больше на",
